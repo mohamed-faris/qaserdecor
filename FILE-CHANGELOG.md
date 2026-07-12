@@ -1,0 +1,69 @@
+# Complete file changelog
+
+Every deployment file is listed below.
+
+- `BUILD-STATUS.md` — Functional build checks for internal links, navigation hooks, forms and code syntax.
+- `FILE-CHANGELOG.md` — Complete file-by-file inventory of the deployment package.
+- `SEO-AUDIT-RESULTS.md` — Automated structural SEO validation report.
+- `SEO-DEPLOYMENT-CHECKLIST.md` — Manual verification, local SEO and indexing checklist.
+- `_headers` — Cloudflare caching and security headers.
+- `_redirects` — Cloudflare clean-URL redirects.
+- `about/index.html` — English About page with business story, service areas, credibility signals and contact details.
+- `ar/about/index.html` — Arabic About page with equivalent content and structured data.
+- `ar/index.html` — Arabic homepage with equivalent content depth, metadata, schema, FAQ and RTL layout.
+- `ar/services/gypsum-ceilings/index.html` — Arabic gypsum-ceiling service page with full content parity.
+- `ar/services/led-lighting/index.html` — Arabic LED ceiling-lighting page with full content parity.
+- `ar/services/modern-classic-finishing/index.html` — Arabic modern-classic finishing page with full content parity.
+- `assets/css/styles.min.css` — Minified responsive stylesheet shared by all pages, including RTL and accessibility states.
+- `assets/images/before-renovation-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/before-renovation-774w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/circular-ceiling-1024w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/circular-ceiling-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/circular-ceiling-960w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/classic-cove-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/classic-cove-720w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/classic-majlis-1024w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/classic-majlis-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/classic-majlis-960w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/coffered-ceiling-1024w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/coffered-ceiling-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/coffered-ceiling-960w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/geometric-living-room-1536w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/geometric-living-room-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/geometric-living-room-960w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/icon-180.png` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/icon-192.png` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/icon-32.png` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/icon-512.png` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/linear-lighting-room-1024w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/linear-lighting-room-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/linear-lighting-room-960w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/logo-180.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/logo-500.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/logo-64.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/marble-majlis-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/marble-majlis-676w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/minimal-linear-ceiling-1536w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/minimal-linear-ceiling-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/minimal-linear-ceiling-960w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/modern-dining-1536w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/modern-dining-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/modern-dining-960w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/octagonal-ceiling-1024w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/octagonal-ceiling-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/octagonal-ceiling-960w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/patterned-majlis-1024w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/patterned-majlis-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/patterned-majlis-960w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/social-preview.jpg` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/tray-led-ceiling-480w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/images/tray-led-ceiling-736w.webp` — Compressed responsive image/icon generated from the supplied project photography or logo.
+- `assets/js/app.min.js` — Minified JavaScript for mobile navigation, before/after slider, WhatsApp form and current year.
+- `favicon.ico` — Browser icon generated from the supplied logo.
+- `index.html` — English homepage rebuilt for technical SEO, local search, schema, FAQ, portfolio and WhatsApp enquiries.
+- `robots.txt` — Crawler rules allowing the requested AI/search bots and referencing the correct sitemap.
+- `services/gypsum-ceilings/index.html` — English gypsum-ceiling service page with direct answers, timeline, materials, FAQ and Service schema.
+- `services/led-lighting/index.html` — English LED ceiling-lighting page with colour temperature, maintenance, timeline and FAQ guidance.
+- `services/modern-classic-finishing/index.html` — English modern-classic finishing page with scope, cost factors, timeline, quality checks and FAQ.
+- `site.webmanifest` — Web app metadata and icons.
+- `sitemap.xml` — Multilingual sitemap containing all canonical URLs and hreflang alternates.
