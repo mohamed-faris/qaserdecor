@@ -1,35 +1,28 @@
-# Al Qaser Al Shamali — deployment and manual SEO checklist
+# Deployment and SEO checklist
 
 ## Completed in code
 
-- Ten crawlable pages: English and Arabic homepages, three bilingual service-page pairs and bilingual About pages.
-- Unique titles, descriptions, canonical URLs and reciprocal `en-AE`, `ar-AE` and `x-default` hreflang tags.
-- `HomeAndConstructionBusiness`, `Service`, `FAQPage`, `BreadcrumbList`, `WebSite` and page-level JSON-LD where relevant.
-- Visible FAQ content on both homepages and every service page.
-- Responsive WebP images, `srcset`, intrinsic dimensions, lazy loading below the fold and LCP image preloading.
-- Shared minified CSS and JavaScript.
-- Correct `robots.txt`, multilingual `sitemap.xml`, Cloudflare Pages `_headers` and clean-URL `_redirects`.
-- No Review or AggregateRating schema because no verifiable public review sources were supplied.
+- 36 crawlable pages with English/Arabic parity.
+- 11 substantive bilingual article pairs about gypsum-board ceilings, walls and execution.
+- Unique metadata, canonicals, reciprocal hreflang and structured data.
+- Local Abu Dhabi, Al Ain and Dubai service context without keyword stuffing.
+- Clear specialist positioning; no claim to provide unrelated décor, furniture or joinery.
+- Responsive images, mobile/RTL layouts, accessible navigation and local WhatsApp conversion paths.
+- Updated sitemap, robots file, redirects, manifest and response headers.
 
-## Verify before publishing
+## Confirm before publishing
 
-1. Confirm that **17+ years** and **750+ completed projects** are accurate.
-2. Confirm the public name **Al Qaser Al Shamali / قصر الشمالي** matches Instagram and the future Google Business Profile.
-3. Confirm the working hours. The build uses **Saturday–Thursday, 8:00 AM–6:00 PM** because the original file conflicted with a separate 24/7 claim.
-4. Supply an exact public address, Google Maps pin, Makani number or a defined service radius. The schema currently uses only **Al Ain, Abu Dhabi, UAE**.
-5. Confirm that Dubai projects are currently accepted and whether a minimum project size or travel fee applies.
-6. Supply the official TikTok profile URL. Only Instagram `@qaser.uae` is included.
-7. Supply real warranty duration and coverage. The website does not invent a warranty period.
-8. Supply public review links or written client permission before publishing testimonials or adding Review schema.
-9. Add current price ranges only when inclusions and exclusions can be stated clearly.
-10. Add verified case-study details: project location, room type, size, completion date, materials and duration.
+1. Confirm the public phone number, Gmail address, Instagram account and service areas.
+2. Confirm that the displayed photographs may be published as project or reference imagery.
+3. Add verified project captions—area, room type, date and scope—when available.
+4. Confirm any material brands, warranty wording and regulated fire-system claims before adding them.
+5. Keep exact private addresses and client details out of public pages.
 
-## Manual steps after deployment
+## After deployment
 
-- Create or claim the Google Business Profile and use exactly the same name, phone, hours, address/service area and website.
-- Verify `qaserdecor.com` in Google Search Console and submit `https://qaserdecor.com/sitemap.xml`.
-- Verify the domain in Bing Webmaster Tools and submit the same sitemap.
-- Inspect all ten URLs and request indexing where available.
-- Add the same NAP details to Instagram, Bing Places and reputable UAE directories.
-- Obtain relevant local links from contractors, consultants, suppliers, developers and project partners.
-- Run PageSpeed Insights on the deployed English and Arabic homepages and at least one service page.
+1. Test every language switch and WhatsApp link on the live domain.
+2. Run PageSpeed Insights on both homepages, both journal indexes and one article.
+3. Submit `https://qaserdecor.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
+4. Request indexing for the homepages, service pages, journal indexes and highest-priority articles.
+5. Keep the Google Business Profile name, phone, service area and opening hours consistent with the website.
+6. Add genuine project photography and case-study facts over time; do not publish invented reviews or project counts.
