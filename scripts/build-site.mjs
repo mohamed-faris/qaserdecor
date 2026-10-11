@@ -33,8 +33,8 @@ const locations = [
     },
     ar: {
       city: "أبوظبي",
-      title: "تنفيذ جبس بورد في أبوظبي | قصر الشمالي",
-      description: "تصميم وتنفيذ ديكورات الجبس بورد للأسقف والجدران للفلل والمجالس في أبوظبي: أسقف مودرن، كوفات، جدران تلفاز، نيشات وتجهيزات الإضاءة.",
+      title: "ديكور جبس بورد أبوظبي | أسقف وجدران | قصر الشمالي",
+      description: "ديكور جبس بورد في أبوظبي: تصميم وتنفيذ أسقف وجدران الجبس بورد للفلل والمجالس، مع كوفات وإضاءة مخفية وجدران تلفاز ونيشات.",
       intro: "قصر الشمالي متخصص في تفصيل وتنفيذ أعمال الجبس بورد للأسقف والجدران للمشاريع المناسبة في أبوظبي، بما يشمل الفلل والمجالس. نحوّل المرجع المودرن أو الكلاسيكي المتفق عليه إلى مناسيب وفتحات وتشطيبات قابلة للتنفيذ بعد القياس.",
       sections: [
         ["أعمال جبس بورد مصممة لمكانك في أبوظبي", ["يبدأ السقف الناجح من الارتفاع الصافي والجوائز وبيت الستارة ومواقع التكييف والإضاءة، وليس من نسخ صورة من الإنترنت. نراجع هذه العناصر قبل اعتماد المناسيب أو الكوفات أو خطوط الظل أو تكوين الجدار.", "في الاستقبال أو المجلس أو الغرفة الخاصة نضبط المحاور حسب المداخل والنوافذ ومركز الأثاث، حتى تظهر نسب السقف أو الجدار متوازنة من أماكن الاستخدام الفعلية."]],
@@ -69,8 +69,8 @@ const locations = [
     },
     ar: {
       city: "العين",
-      title: "تنفيذ جبس بورد في العين | قصر الشمالي",
-      description: "ديكور وتنفيذ الجبس بورد للأسقف والجدران في العين للفلل والمجالس: أسقف مستعارة وكوفات وجدران تلفاز ونيشات وتجهيزات الإضاءة.",
+      title: "ديكور جبس بورد العين | أسقف وجدران | قصر الشمالي",
+      description: "ديكور جبس بورد في العين: تصميم وتنفيذ أسقف وجدران الجبس بورد للفلل والمجالس، مع أسقف مستعارة وكوفات وجدران تلفاز ونيشات.",
       intro: "يقع قصر الشمالي في العين ويتخصص في تفصيل وتنفيذ أعمال الجبس بورد للأسقف والجدران للفلل والمجالس والمشاريع المختارة، انطلاقاً من القياس الفعلي للمكان.",
       sections: [
         ["نبدأ بمعاينة وقياس المكان في العين", ["المستوى المناسب لسقف غرفة لا يلزم أن يناسب غرفة أخرى. نبدأ بقراءة الأبعاد والجوائز والنوافذ وبيت الستارة ومواقع التكييف والإضاءة قبل تثبيت توزيع الجبس بورد.", "هذه المعلومات تحدد المناسيب والمحاور والفتحات وفتحات الصيانة، وتمنع فرض صورة مرجعية على غرفة لا تناسبها نسب ذلك التصميم."]],
@@ -269,10 +269,10 @@ function footer(lang) {
     ar ? "تخصص واضح: تصميم وتنفيذ ديكورات الجبس بورد للأسقف والجدران في أبوظبي والعين ودبي." : "One clear specialism: gypsum-board ceiling and wall decoration, designed and executed in Abu Dhabi, Al Ain and Dubai.",
     "</p></div>\n",
     '<div><h2>', ar ? "التخصص" : "Expertise", '</h2><ul>',
-    '<li><a href="', pathFor(lang, "/services/gypsum-ceilings/"), '">', ar ? "ديكور الأسقف" : "Ceiling decoration", "</a></li>",
-    '<li><a href="', pathFor(lang, "/services/gypsum-walls/"), '">', ar ? "ديكور الجدران" : "Wall details", "</a></li>",
-    '<li><a href="', pathFor(lang, "/services/led-lighting/"), '">', ar ? "دمج الإضاءة" : "Lighting details", "</a></li>",
-    '<li><a href="', pathFor(lang, "/services/modern-classic-finishing/"), '">', ar ? "الستايلات والتنفيذ" : "Styles & execution", "</a></li>",
+    '<li><a href="', pathFor(lang, "/services/gypsum-ceilings/"), '">', ar ? "أسقف جبس بورد" : "Ceiling decoration", "</a></li>",
+    '<li><a href="', pathFor(lang, "/services/gypsum-walls/"), '">', ar ? "جدران جبس بورد" : "Wall details", "</a></li>",
+    '<li><a href="', pathFor(lang, "/services/led-lighting/"), '">', ar ? "كوفات وإضاءة مخفية" : "Lighting details", "</a></li>",
+    '<li><a href="', pathFor(lang, "/services/modern-classic-finishing/"), '">', ar ? "جبس بورد مودرن وكلاسيك" : "Styles & execution", "</a></li>",
     "</ul></div>\n",
     '<div><h2>', ar ? "استكشف" : "Explore", '</h2><ul>',
     '<li><a href="', home, '#work">', ar ? "أعمال مختارة" : "Selected work", "</a></li>",
@@ -349,15 +349,16 @@ function homepage(lang) {
   const ar = lang === "ar";
   const path = ar ? "/ar/" : "/";
   const alternate = ar ? "/" : "/ar/";
-  const title = ar ? "قصر الشمالي | ديكور وتنفيذ الجبس بورد في أبوظبي" : "Gypsum Board Decoration Abu Dhabi | Qasr Alshamali";
+  const title = ar ? "ديكور جبس بورد أبوظبي والعين | أسقف وجدران | قصر الشمالي" : "Gypsum Board Decoration Abu Dhabi | Qasr Alshamali";
   const description = ar
-    ? "قصر الشمالي متخصص في تصميم وتنفيذ ديكورات الجبس بورد للأسقف والجدران في أبوظبي والعين ودبي."
+    ? "ديكور جبس بورد في أبوظبي والعين: تصميم وتنفيذ أسقف وجدران الجبس بورد للفلل والمجالس، مع كوفات وإضاءة مخفية وخلفيات تلفاز."
     : "Specialist gypsum-board ceiling and wall decoration, design coordination and execution for villas and majlis rooms in Abu Dhabi, Al Ain and Dubai.";
   const faqs = ar
     ? [
         { q: "هل تنفذون ديكور داخلي كامل؟", a: "لا. تركيزنا في تصميم وتنفيذ الجبس بورد للأسقف والجدران: الكوفات، بيوت الستائر، الإنارة المخفية، النيشات وخلفيات التلفاز والتفاصيل المرتبطة بها." },
         { q: "كيف أبدأ طلب تسعير؟", a: "أرسل المدينة ونوع الغرفة وصور الوضع الحالي وأي صورة مرجعية عبر واتساب. يتم تأكيد النطاق والسعر بعد القياس وتحديد التفاصيل القابلة للتنفيذ." },
         { q: "هل تنسقون مواقع الإضاءة والتكييف؟", a: "نحدد فتحات ومناسيب الجبس بورد ونتابع تنسيقها مع الفنيين المختصين بالكهرباء والتكييف قبل إغلاق الألواح." },
+        { q: "هل تنفذون ديكور جبس بورد في أبوظبي والعين؟", a: "نعم. ننفذ أعمال الجبس بورد للأسقف والجدران للفلل والمجالس في العين وأبوظبي، ولمشاريع مناسبة في دبي. يتحدد نطاق المعاينة والتنفيذ حسب الموقع والتفاصيل المطلوبة." },
         { q: "ما المناطق التي تخدمونها؟", a: "نعمل في العين وأبوظبي ودبي للمشاريع المناسبة، مع تحديد المعاينة ونطاق العمل حسب الموقع." }
       ]
     : [
@@ -420,8 +421,8 @@ function homepage(lang) {
     '<main id="main">\n',
     '<section class="hero"><div class="hero-copy"><div><span class="eyebrow">',
     ar ? "متخصصون في الجبس بورد" : "Gypsum board specialists", '</span><h1>',
-    ar ? "نشكّل السقف والجدار." : "Ceilings and walls, shaped with purpose.", '</h1><p class="lede">',
-    ar ? "نصمم تفاصيل الجبس بورد وننفذها في الأسقف والجدران للفلل والمجالس في أبوظبي والعين ودبي. هذا هو تخصصنا — لا نقدم الديكور الداخلي العام." : "We design and execute gypsum-board details for ceilings and walls in villas and majlis rooms across Abu Dhabi, Al Ain and Dubai. This is our specialism—not general interior décor.",
+    ar ? "ديكور جبس بورد" : "Ceilings and walls, shaped with purpose.", '</h1><p class="lede">',
+    ar ? "ننفذ ديكور جبس بورد للأسقف والجدران للفلل والمجالس في أبوظبي والعين: كوفات، بيوت ستائر، إضاءة مخفية، خلفيات تلفاز ونيشات. هذا تخصصنا—لا نقدم الديكور الداخلي العام." : "We design and execute gypsum-board details for ceilings and walls in villas and majlis rooms across Abu Dhabi, Al Ain and Dubai. This is our specialism—not general interior décor.",
     '</p><div class="button-row"><a class="button solid" href="#contact">', ar ? "اطلب معاينة" : "Request a site visit", '</a><a class="button" href="#work">',
     ar ? "شاهد الأعمال" : "View selected work", '</a></div></div><div class="hero-note"><strong>01</strong><span>',
     ar ? "من الفكرة والقياس إلى الهيكل والمعالجة والتسليم." : "From measured idea to framing, finishing and handover.", "</span></div></div>",
@@ -439,7 +440,7 @@ function homepage(lang) {
     ar ? "نضبط المرجع على قياسات المكان وننسق الفتحات ثم ننفذ أعمال الجبس بورد بوضوح من أول زيارة حتى الاستلام." : "We adapt the reference to the measured room, coordinate the openings and execute the gypsum-board work from first survey to handover.",
     '</p></div><div class="service-list">', serviceRows, "</div></div></section>\n",
     '<section class="section section-local" id="service-areas"><div class="container"><div class="section-head" data-reveal><div><span class="eyebrow">',
-    ar ? "مناطق الخدمة" : "Service areas", '</span><h2>', ar ? "جبس بورد في أبوظبي والعين." : "Gypsum board work in Abu Dhabi and Al Ain.",
+    ar ? "مناطق الخدمة" : "Service areas", '</span><h2>', ar ? "ديكور جبس بورد في أبوظبي والعين." : "Gypsum board work in Abu Dhabi and Al Ain.",
     '</h2></div><p>', ar ? "صفحات محلية توضح نطاق أعمال الأسقف والجدران، وكيف نبدأ المعاينة والتفصيل للمشروع حسب المدينة." : "Local guides to the ceiling and wall scope, and how a site survey and detail process begins in each city.",
     '</p></div><div class="location-grid">', locationCards, "</div></div></section>\n",
     '<section class="section" id="work"><div class="container"><div class="section-head" data-reveal><div><span class="eyebrow">',
@@ -585,7 +586,7 @@ function locationPage(location, lang) {
       { name: item.city }
     ]),
     '<section class="page-hero"><div class="container page-hero-grid"><div><span class="eyebrow">', ar ? "منطقة خدمة" : "Service area", '</span><h1>',
-    escapeHtml(ar ? "تنفيذ جبس بورد في " + item.city : "Gypsum board work in " + item.city), '</h1><p class="lede">', escapeHtml(item.intro),
+    escapeHtml(ar ? "ديكور جبس بورد في " + item.city : "Gypsum board work in " + item.city), '</h1><p class="lede">', escapeHtml(item.intro),
     '</p><div class="button-row"><a class="button solid" href="https://wa.me/971507427070" target="_blank" rel="noopener">', ar ? "اطلب معاينة" : "Request a site visit", '</a></div></div><aside class="page-aside"><span class="kicker">',
     ar ? "التخصص" : "Specialist scope", '</span><p>', ar ? "ديكور وتنفيذ الجبس بورد للأسقف والجدران. لا نقدم الديكور الداخلي العام أو الأثاث أو النجارة." : "Gypsum-board ceiling and wall decoration and execution. We do not provide general interior decoration, furniture or joinery.",
     '</p></aside></div></section>',
@@ -614,9 +615,9 @@ function blogIndex(lang) {
   const basePath = "/blog/";
   const path = pathFor(lang, basePath);
   const alternate = pathFor(ar ? "en" : "ar", basePath);
-  const title = ar ? "مجلة الجبس بورد | أدلة التصميم والتنفيذ في أبوظبي" : "Gypsum Board Journal | Design & Execution Guides";
+  const title = ar ? "مجلة الجبس بورد في الإمارات | أسقف وجدران وتنفيذ" : "Gypsum Board Journal | Design & Execution Guides";
   const description = ar
-    ? "أدلة عملية بالعربية عن أسقف وجدران الجبس بورد والمواد والإضاءة والتكلفة والتنفيذ في أبوظبي."
+    ? "مقالات عربية عملية عن ديكور جبس بورد الأسقف والجدران للفلل والمجالس في أبوظبي والعين: التصميم والإضاءة والتكلفة والتنفيذ."
     : "Practical guides to gypsum-board ceilings, walls, materials, lighting, cost and execution for Abu Dhabi homes and projects.";
   const rows = articles.map((article, index) => {
     const item = article[lang];
@@ -629,8 +630,8 @@ function blogIndex(lang) {
   const body = [
     header(lang, "blog", alternate),
     '<main id="main"><section class="page-hero"><div class="container blog-index-intro"><span class="eyebrow">',
-    ar ? "المجلة" : "Journal", '</span><h1>', ar ? "المعرفة قبل التنفيذ." : "Know before you build.", '</h1><p class="lede">',
-    ar ? "أحد عشر دليلاً عملياً بالعربية والإنجليزية، كتبناها لمساعدة مالك الفيلا أو المسؤول عن المشروع على اتخاذ قرارات أوضح في الجبس بورد." : "Eleven practical guides in English and Arabic, written to help villa owners and project teams make clearer gypsum-board decisions.",
+    ar ? "المجلة" : "Journal", '</span><h1>', ar ? "دليل الجبس بورد للفلل والمجالس." : "Know before you build.", '</h1><p class="lede">',
+    ar ? "أدلة عربية عملية تساعد أصحاب الفلل والمجالس في أبوظبي والعين على اختيار ديكور الجبس بورد وتخطيط السقف والجدار والإضاءة قبل التنفيذ." : "Eleven practical guides in English and Arabic, written to help villa owners and project teams make clearer gypsum-board decisions.",
     '</p></div></section><section class="section"><div class="container blog-list">', rows, "</div></section>",
     contactBand(lang),
     "</main>",
