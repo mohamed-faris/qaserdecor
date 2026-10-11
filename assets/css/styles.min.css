@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  src: url("/assets/fonts/noto-kufi-arabic-bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/fonts/noto-sans-arabic-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("/assets/fonts/noto-sans-arabic-bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   --ink: #171713;
   --coal: #20201b;
@@ -12,12 +34,14 @@
   --max: 1320px;
   --serif: Georgia, "Times New Roman", serif;
   --sans: Inter, "Helvetica Neue", Arial, sans-serif;
+  --arabic-sans: "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+  --arabic-display: "Noto Kufi Arabic", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.62; }
-html[dir="rtl"] body { font-family: Tahoma, Arial, sans-serif; }
+html[dir="rtl"] body { font-family: var(--arabic-sans); }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 button, input, select, textarea { font: inherit; }
@@ -39,7 +63,7 @@ html[dir="rtl"] .notice-inner { letter-spacing: 0; }
 .wordmark { display: inline-flex; flex-direction: column; width: max-content; text-decoration: none; line-height: 1; }
 .wordmark strong { font-family: var(--serif); font-weight: 500; font-size: 1.02rem; letter-spacing: .08em; }
 .wordmark small { margin-block-start: 5px; color: var(--stone); font-size: .58rem; letter-spacing: .18em; text-transform: uppercase; }
-html[dir="rtl"] .wordmark strong { font-family: Tahoma, Arial, sans-serif; letter-spacing: 0; }
+html[dir="rtl"] .wordmark strong { font-family: var(--arabic-display); font-weight: 700; letter-spacing: 0; }
 html[dir="rtl"] .wordmark small { letter-spacing: 0; }
 .main-nav { display: flex; align-items: center; justify-content: center; gap: 30px; }
 .main-nav a { position: relative; text-decoration: none; font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
@@ -52,7 +76,7 @@ html[dir="rtl"] .main-nav a { letter-spacing: 0; }
 .menu-toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; color: var(--ink); }
 
 h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 500; line-height: .98; letter-spacing: -.035em; text-wrap: balance; }
-html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3 { font-family: Tahoma, Arial, sans-serif; line-height: 1.25; letter-spacing: 0; }
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3 { font-family: var(--arabic-display); font-weight: 700; line-height: 1.38; letter-spacing: 0; }
 h1 { font-size: clamp(3.25rem, 8vw, 7.8rem); }
 h2 { font-size: clamp(2.5rem, 5.4vw, 5.25rem); }
 h3 { font-size: clamp(1.45rem, 2.4vw, 2.2rem); line-height: 1.08; }
@@ -140,7 +164,7 @@ html[dir="rtl"] .hero-copy { padding-inline: clamp(35px, 5vw, 80px) max(24px, ca
 .faq-list summary::after { content: "+"; position: absolute; inset-inline-end: 3px; inset-block-start: 18px; color: var(--bronze-dark); font-family: var(--sans); font-size: 1.7rem; font-weight: 400; }
 .faq-list details[open] summary::after { content: "−"; }
 .faq-list p { max-width: 74ch; margin: 0; padding: 0 56px 25px 0; color: var(--stone); }
-html[dir="rtl"] .faq-list summary { padding-inline: 0 56px; font-family: Tahoma, Arial, sans-serif; }
+html[dir="rtl"] .faq-list summary { padding-inline: 0 56px; font-family: var(--arabic-display); font-weight: 700; }
 html[dir="rtl"] .faq-list p { padding-inline: 56px 0; }
 
 .contact-band { display: grid; grid-template-columns: 1fr .75fr; gap: 80px; align-items: end; }
@@ -203,7 +227,7 @@ html[dir="rtl"] .article-meta { letter-spacing: 0; }
 .site-footer { background: var(--coal); color: var(--white); padding-block: 75px 24px; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 60px; }
 .footer-mark { font-family: var(--serif); font-size: clamp(2rem, 4vw, 4.2rem); font-weight: 500; line-height: 1; }
-html[dir="rtl"] .footer-mark { font-family: Tahoma, Arial, sans-serif; }
+html[dir="rtl"] .footer-mark { font-family: var(--arabic-display); font-weight: 700; }
 .footer-note { max-width: 34ch; margin-block-start: 22px; color: rgba(255,255,255,.58); font-size: .84rem; }
 .site-footer h2 { margin-block-end: 19px; font-family: var(--sans); font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
