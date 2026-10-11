@@ -132,6 +132,17 @@ html[dir="rtl"] .hero-copy { padding-inline: clamp(35px, 5vw, 80px) max(24px, ca
 .journal-card h3 { font-size: clamp(1.35rem, 2.2vw, 2.05rem); line-height: 1.12; }
 .journal-card p { margin-block-start: 12px; color: var(--stone); font-size: .88rem; }
 
+.faq-section { background: var(--white); }
+.faq-list { border-block-start: 1px solid var(--line); }
+.faq-list details { border-block-end: 1px solid var(--line); }
+.faq-list summary { position: relative; cursor: pointer; list-style: none; padding: 24px 56px 24px 0; font-family: var(--serif); font-size: clamp(1.35rem, 2.5vw, 2.25rem); line-height: 1.1; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: "+"; position: absolute; inset-inline-end: 3px; inset-block-start: 18px; color: var(--bronze-dark); font-family: var(--sans); font-size: 1.7rem; font-weight: 400; }
+.faq-list details[open] summary::after { content: "−"; }
+.faq-list p { max-width: 74ch; margin: 0; padding: 0 56px 25px 0; color: var(--stone); }
+html[dir="rtl"] .faq-list summary { padding-inline: 0 56px; font-family: Tahoma, Arial, sans-serif; }
+html[dir="rtl"] .faq-list p { padding-inline: 56px 0; }
+
 .contact-band { display: grid; grid-template-columns: 1fr .75fr; gap: 80px; align-items: end; }
 .contact-band h2 { max-width: 11ch; }
 .contact-details { border-block-start: 1px solid var(--light-line); }
@@ -250,6 +261,11 @@ html[dir="rtl"] .footer-mark { font-family: Tahoma, Arial, sans-serif; }
   .process-grid { grid-template-columns: 1fr; }
   .process-step { min-height: 240px; }
   .journal-grid { grid-template-columns: 1fr; }
+  .faq-list summary { padding-block: 20px; padding-inline-end: 42px; font-size: 1.32rem; }
+  .faq-list summary::after { inset-block-start: 13px; }
+  .faq-list p { padding-inline-end: 0; }
+  html[dir="rtl"] .faq-list summary { padding-inline: 42px 0; }
+  html[dir="rtl"] .faq-list p { padding-inline: 0; }
   .service-intro-image, .service-intro-image img { position: static; min-height: 440px; }
   .article-side { position: static; }
   .article-layout { gap: 55px; }

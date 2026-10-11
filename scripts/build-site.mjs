@@ -8,7 +8,8 @@ const site = "https://qaserdecor.com";
 const phone = "+971507427070";
 const phoneDisplay = "+971 50 742 7070";
 const email = "qaseralshamali@gmail.com";
-const date = "2026-10-06";
+const publishedDate = "2026-10-06";
+const lastModified = "2026-10-11";
 
 const imageDimensions = {
   "classic-majlis-1024w.webp": [1024, 1536],
@@ -18,7 +19,11 @@ const imageDimensions = {
   "before-renovation-774w.webp": [774, 1032],
   "octagonal-ceiling-1024w.webp": [1024, 1536],
   "coffered-ceiling-1024w.webp": [1024, 1536],
-  "circular-ceiling-1024w.webp": [1024, 1024]
+  "circular-ceiling-1024w.webp": [1024, 1024],
+  "modern-ceiling-hero.webp": [1122, 1402],
+  "modern-cove-reception.webp": [1536, 1024],
+  "modern-gypsum-tv-wall.webp": [1122, 1402],
+  "gypsum-ceiling-execution.webp": [1536, 1024]
 };
 
 function escapeHtml(value) {
@@ -37,7 +42,8 @@ function image(name, alt, className, loading) {
     ' width="', size[0], '" height="', size[1], '"',
     ' alt="', escapeHtml(alt), '"',
     className ? ' class="' + escapeHtml(className) + '"' : "",
-    ' loading="', loading || "lazy", '" decoding="async">'
+    ' loading="', loading || "lazy", '" decoding="async"',
+    loading === "eager" ? ' fetchpriority="high"' : "", ">"
   ].join("");
 }
 
@@ -57,7 +63,7 @@ function businessSchema() {
     name: "Al Qaser Al Shamali",
     alternateName: "قصر الشمالي",
     url: site + "/",
-    image: site + "/assets/images/classic-majlis-1024w.webp",
+    image: site + "/assets/images/modern-ceiling-hero.webp",
     logo: site + "/assets/images/logo-500.webp",
     telephone: phone,
     email,
@@ -82,6 +88,8 @@ function head(options) {
     "@context": "https://schema.org",
     "@graph": [businessSchema(), ...(options.schema || [])]
   };
+  const socialImage = options.image || "modern-ceiling-hero.webp";
+  const socialSize = imageDimensions[socialImage] || [1200, 630];
   return [
     "<!doctype html>\n",
     '<html lang="', lang === "ar" ? "ar-AE" : "en-AE", '" dir="', lang === "ar" ? "rtl" : "ltr", '">\n<head>\n',
@@ -89,6 +97,7 @@ function head(options) {
     '<meta name="viewport" content="width=device-width,initial-scale=1">\n',
     "<title>", escapeHtml(options.title), "</title>\n",
     '<meta name="description" content="', escapeHtml(options.description), '">\n',
+    '<meta name="author" content="Al Qaser Al Shamali">\n',
     '<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">\n',
     '<meta name="theme-color" content="#171713">\n',
     '<link rel="canonical" href="', canonical, '">\n',
@@ -105,8 +114,15 @@ function head(options) {
     '<meta property="og:title" content="', escapeHtml(options.title), '">\n',
     '<meta property="og:description" content="', escapeHtml(options.description), '">\n',
     '<meta property="og:url" content="', canonical, '">\n',
-    '<meta property="og:image" content="', site + "/assets/images/" + (options.image || "classic-majlis-1024w.webp"), '">\n',
+    '<meta property="og:image" content="', site + "/assets/images/" + socialImage, '">\n',
+    '<meta property="og:image:width" content="', socialSize[0], '">\n',
+    '<meta property="og:image:height" content="', socialSize[1], '">\n',
+    '<meta property="og:image:alt" content="', escapeHtml(options.imageAlt || options.title), '">\n',
     '<meta name="twitter:card" content="summary_large_image">\n',
+    '<meta name="twitter:title" content="', escapeHtml(options.title), '">\n',
+    '<meta name="twitter:description" content="', escapeHtml(options.description), '">\n',
+    '<meta name="twitter:image" content="', site + "/assets/images/" + socialImage, '">\n',
+    '<meta name="twitter:image:alt" content="', escapeHtml(options.imageAlt || options.title), '">\n',
     '<script type="application/ld+json">', JSON.stringify(schema).replaceAll("<", "\\u003c"), "</script>\n",
     '<script src="/assets/js/app.min.js" defer></script>\n',
     "</head>\n"
@@ -195,6 +211,31 @@ function breadcrumbs(lang, items) {
   return '<nav class="breadcrumbs" aria-label="' + (ar ? "مسار الصفحة" : "Breadcrumb") + '"><div class="container"><ol>' + links + "</ol></div></nav>\n";
 }
 
+function breadcrumbSchema(path, lang, items) {
+  return {
+    "@type": "BreadcrumbList",
+    "@id": site + path + "#breadcrumb",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      ...(item.path ? { item: site + item.path } : {})
+    }))
+  };
+}
+
+function faqSection(lang, entries) {
+  const ar = lang === "ar";
+  return [
+    '<section class="section faq-section"><div class="container"><div class="section-head" data-reveal><div><span class="eyebrow">',
+    ar ? "أسئلة واضحة" : "Straight answers", '</span><h2>', ar ? "قبل أن تبدأ المشروع." : "Before you start a project.",
+    '</h2></div><p>', ar ? "إجابات مختصرة على الأسئلة التي تساعد في تحديد نطاق عمل الجبس بورد قبل المعاينة." : "Short, practical answers that help define a gypsum-board scope before the site survey.",
+    '</p></div><div class="faq-list">',
+    entries.map((entry, index) => '<details' + (index === 0 ? " open" : "") + ' data-reveal><summary>' + escapeHtml(entry.q) + '</summary><p>' + escapeHtml(entry.a) + "</p></details>").join(""),
+    "</div></div></section>\n"
+  ].join("");
+}
+
 function contactBand(lang) {
   const ar = lang === "ar";
   return [
@@ -219,6 +260,19 @@ function homepage(lang) {
   const description = ar
     ? "قصر الشمالي متخصص في تصميم وتنفيذ ديكورات الجبس بورد للأسقف والجدران في أبوظبي والعين ودبي."
     : "Specialist gypsum-board ceiling and wall decoration, design coordination and execution for villas and majlis rooms in Abu Dhabi, Al Ain and Dubai.";
+  const faqs = ar
+    ? [
+        { q: "هل تنفذون ديكور داخلي كامل؟", a: "لا. تركيزنا في تصميم وتنفيذ الجبس بورد للأسقف والجدران: الكوفات، بيوت الستائر، الإنارة المخفية، النيشات وخلفيات التلفاز والتفاصيل المرتبطة بها." },
+        { q: "كيف أبدأ طلب تسعير؟", a: "أرسل المدينة ونوع الغرفة وصور الوضع الحالي وأي صورة مرجعية عبر واتساب. يتم تأكيد النطاق والسعر بعد القياس وتحديد التفاصيل القابلة للتنفيذ." },
+        { q: "هل تنسقون مواقع الإضاءة والتكييف؟", a: "نحدد فتحات ومناسيب الجبس بورد ونتابع تنسيقها مع الفنيين المختصين بالكهرباء والتكييف قبل إغلاق الألواح." },
+        { q: "ما المناطق التي تخدمونها؟", a: "نعمل في العين وأبوظبي ودبي للمشاريع المناسبة، مع تحديد المعاينة ونطاق العمل حسب الموقع." }
+      ]
+    : [
+        { q: "Do you provide full interior decoration?", a: "No. Our focus is gypsum-board ceiling and wall design and execution: coves, curtain pockets, concealed-light details, niches, television walls and the details that belong to them." },
+        { q: "How do I request a quotation?", a: "Send the city, room type, current photos and a useful reference through WhatsApp. Scope and pricing are confirmed after measurement and an agreed buildable detail." },
+        { q: "Do you coordinate lighting and AC points?", a: "We define gypsum-board levels and openings, then coordinate their locations with the responsible electrical and air-conditioning trades before the boards are closed." },
+        { q: "Which areas do you serve?", a: "We work in Al Ain, Abu Dhabi and Dubai for suitable projects, with the survey and scope agreed according to the location." }
+      ];
   const pageSchema = {
     "@type": "WebPage",
     "@id": site + path + "#webpage",
@@ -226,7 +280,22 @@ function homepage(lang) {
     name: title,
     description,
     inLanguage: ar ? "ar-AE" : "en-AE",
-    about: { "@id": site + "/#business" }
+    about: { "@id": site + "/#business" },
+    primaryImageOfPage: site + "/assets/images/modern-ceiling-hero.webp"
+  };
+  const websiteSchema = {
+    "@type": "WebSite",
+    "@id": site + "/#website",
+    url: site + "/",
+    name: "Al Qaser Al Shamali",
+    alternateName: "Qasr Alshamali",
+    inLanguage: ["en-AE", "ar-AE"],
+    publisher: { "@id": site + "/#business" }
+  };
+  const faqSchema = {
+    "@type": "FAQPage",
+    "@id": site + path + "#faq",
+    mainEntity: faqs.map((entry) => ({ "@type": "Question", name: entry.q, acceptedAnswer: { "@type": "Answer", text: entry.a } }))
   };
   const serviceRows = services.map((service, index) => {
     const item = service[lang];
@@ -255,8 +324,8 @@ function homepage(lang) {
     '</p><div class="button-row"><a class="button solid" href="#contact">', ar ? "اطلب معاينة" : "Request a site visit", '</a><a class="button" href="#work">',
     ar ? "شاهد الأعمال" : "View selected work", '</a></div></div><div class="hero-note"><strong>01</strong><span>',
     ar ? "من الفكرة والقياس إلى الهيكل والمعالجة والتسليم." : "From measured idea to framing, finishing and handover.", "</span></div></div>",
-    '<div class="hero-image">', image("classic-majlis-1024w.webp", ar ? "ديكور سقف جبس بورد كلاسيكي في مجلس" : "Detailed classic gypsum-board ceiling in a majlis", "", "eager"),
-    '<div class="image-label">', ar ? "تفاصيل مجلس كلاسيكي" : "Classic majlis detail", "<span>", ar ? "جبس بورد • أسقف" : "Gypsum board • Ceilings", "</span></div></div></section>\n",
+    '<div class="hero-image">', image("modern-ceiling-hero.webp", ar ? "سقف جبس بورد مودرن بإضاءة مخفية في فيلا" : "Modern gypsum-board ceiling with concealed cove lighting in a UAE villa", "", "eager"),
+    '<div class="image-label">', ar ? "سقف مودرن بإضاءة مخفية" : "Modern ceiling, concealed light", "<span>", ar ? "جبس بورد • تنفيذ" : "Gypsum board • execution", "</span></div></div></section>\n",
     '<section class="section section-dark"><div class="container manifesto" data-reveal><div class="manifesto-index">02</div><div class="manifesto-copy"><span class="eyebrow">',
     ar ? "تركيز واحد" : "A deliberate focus", '</span><h2>', ar ? "لسنا شركة ديكور عام." : "We are not a general décor company.", '</h2><p>',
     ar ? "نعمل في ديكور وتنفيذ الجبس بورد: أسقف وجدران وكوفات وفتحات وتفاصيل مودرن أو كلاسيك. التخصص يجعل القياس والاتفاق والتنفيذ أوضح." : "We work in gypsum-board decoration and execution: ceilings, walls, coves, openings, and modern or classic details. A focused scope makes design decisions and site responsibility clearer.",
@@ -269,17 +338,17 @@ function homepage(lang) {
     ar ? "نضبط المرجع على قياسات المكان وننسق الفتحات ثم ننفذ أعمال الجبس بورد بوضوح من أول زيارة حتى الاستلام." : "We adapt the reference to the measured room, coordinate the openings and execute the gypsum-board work from first survey to handover.",
     '</p></div><div class="service-list">', serviceRows, "</div></div></section>\n",
     '<section class="section" id="work"><div class="container"><div class="section-head" data-reveal><div><span class="eyebrow">',
-    ar ? "أعمال مختارة" : "Selected work", '</span><h2>', ar ? "السقف جزء من العمارة." : "The ceiling is part of the architecture.", '</h2></div><p>',
-    ar ? "نعرض هنا صوراً أقرب إلى واقع الموقع والتنفيذ، لأن الدقة أهم من صورة مثالية بلا تفاصيل عمل." : "We foreground work that reads like a real site and a real room, because craft is more useful than a perfect, anonymous render.",
+    ar ? "اتجاهات مودرن" : "Modern gypsum direction", '</span><h2>', ar ? "السقف جزء من العمارة." : "The ceiling is part of the architecture.", '</h2></div><p>',
+    ar ? "أمثلة بصرية لتفاصيل السقف والجدار التي يمكن تطويرها حسب القياس الحقيقي للموقع؛ نثبت المقاسات والفتحات قبل البدء في التنفيذ." : "Visual references for ceiling and wall details that are developed around the real site measurement; levels and openings are confirmed before execution begins.",
     '</p></div><div class="work-grid">',
-    '<figure class="work-item" data-reveal>', image("before-renovation-774w.webp", ar ? "مرحلة تنفيذ سقف جبس كلاسيكي قبل التشطيب" : "Classic gypsum ceiling during execution"), '<figcaption><span>',
-    ar ? "أثناء التنفيذ" : "Work in progress", '</span><span>01</span></figcaption></figure>',
-    '<figure class="work-item" data-reveal>', image("classic-cove-720w.webp", ar ? "سقف جبس بإضاءة مخفية وتفاصيل جدار" : "Gypsum ceiling with concealed light and wall details"), '<figcaption><span>',
-    ar ? "سقف وجدار" : "Ceiling + wall", '</span><span>02</span></figcaption></figure>',
-    '<figure class="work-item" data-reveal>', image("patterned-majlis-1024w.webp", ar ? "زخرفة جبس بورد لمجلس كلاسيكي" : "Patterned gypsum detail in a classic majlis"), '<figcaption><span>',
-    ar ? "مجلس كلاسيكي" : "Classic majlis", '</span><span>03</span></figcaption></figure>',
-    '<figure class="work-item" data-reveal>', image("marble-majlis-676w.webp", ar ? "كوفات جبس بورد بإضاءة دافئة" : "Gypsum-board coves with warm concealed light"), '<figcaption><span>',
-    ar ? "كوفات وإضاءة" : "Coves + light", '</span><span>04</span></figcaption></figure>',
+    '<figure class="work-item" data-reveal>', image("gypsum-ceiling-execution.webp", ar ? "هيكل سقف جبس بورد مودرن أثناء التنفيذ" : "Modern gypsum-board ceiling framing during site execution"), '<figcaption><span>',
+    ar ? "هيكل وتنفيذ" : "Framing + execution", '</span><span>01</span></figcaption></figure>',
+    '<figure class="work-item" data-reveal>', image("modern-gypsum-tv-wall.webp", ar ? "جدار تلفاز جبس بورد مودرن بنيشات مضاءة" : "Modern gypsum-board television wall with illuminated niches"), '<figcaption><span>',
+    ar ? "جدار تلفاز مودرن" : "Modern television wall", '</span><span>02</span></figcaption></figure>',
+    '<figure class="work-item" data-reveal>', image("modern-ceiling-hero.webp", ar ? "سقف جبس بورد مودرن بإضاءة مخفية" : "Modern gypsum-board ceiling with concealed cove lighting"), '<figcaption><span>',
+    ar ? "سقف مودرن" : "Modern ceiling", '</span><span>03</span></figcaption></figure>',
+    '<figure class="work-item" data-reveal>', image("modern-cove-reception.webp", ar ? "استقبال في فيلا بسقف جبس بورد مودرن وخطوط ضوء" : "Villa reception with modern gypsum-board coves and light lines"), '<figcaption><span>',
+    ar ? "كوفات وخطوط ظل" : "Coves + shadow lines", '</span><span>04</span></figcaption></figure>',
     "</div></div></section>\n",
     '<section class="section"><div class="container"><div class="section-head" data-reveal><div><span class="eyebrow">',
     ar ? "طريقة العمل" : "The process", '</span><h2>', ar ? "أربع مراحل. مسؤولية واضحة." : "Four stages. Clear responsibility.", '</h2></div><p>',
@@ -294,11 +363,12 @@ function homepage(lang) {
     ar ? "مقالات عملية بالعربية والإنجليزية عن التخطيط والمواد والتكلفة والتنفيذ في أبوظبي." : "Practical English and Arabic guides to planning, materials, cost and execution in Abu Dhabi.",
     '</p></div><div class="journal-grid">', articleCards, '</div><div class="button-row"><a class="button" href="', pathFor(lang, "/blog/"), '">',
     ar ? "جميع المقالات" : "All articles", "</a></div></div></section>\n",
+    faqSection(lang, faqs),
     contactBand(lang),
     "</main>\n",
     footer(lang)
   ].join("");
-  return head({ lang, path, alternates: pairFor("/"), title, description, image: "classic-majlis-1024w.webp", schema: [pageSchema] }) + body;
+  return head({ lang, path, alternates: pairFor("/"), title, description, image: "modern-ceiling-hero.webp", imageAlt: ar ? "سقف جبس بورد مودرن في فيلا إماراتية" : "Modern gypsum-board ceiling in a UAE villa", schema: [websiteSchema, pageSchema, faqSchema] }) + body;
 }
 
 function servicePage(service, lang) {
@@ -322,6 +392,11 @@ function servicePage(service, lang) {
     provider: { "@id": site + "/#business" },
     areaServed: ["Abu Dhabi", "Al Ain", "Dubai"]
   };
+  const serviceBreadcrumb = breadcrumbSchema(path, lang, [
+    { name: ar ? "الرئيسية" : "Home", path: pathFor(lang, "/") },
+    { name: ar ? "التخصص" : "Expertise", path: pathFor(lang, "/") + "#expertise" },
+    { name: item.label }
+  ]);
   const body = [
     header(lang, "services", alternate),
     '<main id="main">',
@@ -349,7 +424,8 @@ function servicePage(service, lang) {
     title,
     description: item.description,
     image: service.image,
-    schema: [serviceSchema]
+    imageAlt: item.title,
+    schema: [serviceSchema, serviceBreadcrumb]
   }) + body;
 }
 
@@ -392,8 +468,20 @@ function blogIndex(lang) {
       name: title,
       description,
       url: site + path,
-      inLanguage: ar ? "ar-AE" : "en-AE"
-    }]
+      inLanguage: ar ? "ar-AE" : "en-AE",
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: articles.map((article, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: site + pathFor(lang, "/blog/" + article.slug + "/"),
+          name: article[lang].title
+        }))
+      }
+    }, breadcrumbSchema(path, lang, [
+      { name: ar ? "الرئيسية" : "Home", path: pathFor(lang, "/") },
+      { name: ar ? "المجلة" : "Journal" }
+    ])]
   }) + body;
 }
 
@@ -418,18 +506,25 @@ function articlePage(article, lang, index) {
     ].join("");
   }).join("");
   const articleSchema = {
-    "@type": "Article",
+    "@type": "BlogPosting",
     "@id": site + path + "#article",
     headline: item.title,
     description: item.description,
     image: site + "/assets/images/" + article.image,
-    datePublished: date,
-    dateModified: date,
+    datePublished: publishedDate,
+    dateModified: lastModified,
     inLanguage: ar ? "ar-AE" : "en-AE",
-    mainEntityOfPage: site + path,
+    mainEntityOfPage: { "@type": "WebPage", "@id": site + path },
     author: { "@id": site + "/#business" },
-    publisher: { "@id": site + "/#business" }
+    publisher: { "@id": site + "/#business" },
+    isPartOf: { "@id": site + pathFor(lang, "/blog/") + "#collection" },
+    wordCount: item.sections.flatMap((section) => section[1]).join(" ").trim().split(/\s+/).length
   };
+  const articleBreadcrumb = breadcrumbSchema(path, lang, [
+    { name: ar ? "الرئيسية" : "Home", path: pathFor(lang, "/") },
+    { name: ar ? "المجلة" : "Journal", path: pathFor(lang, "/blog/") },
+    { name: item.title }
+  ]);
   const body = [
     header(lang, "blog", alternate),
     '<main id="main">',
@@ -463,7 +558,8 @@ function articlePage(article, lang, index) {
     description: item.description,
     image: article.image,
     ogType: "article",
-    schema: [articleSchema]
+    imageAlt: item.title,
+    schema: [articleSchema, articleBreadcrumb]
   }) + body;
 }
 
@@ -486,7 +582,7 @@ function aboutPage(lang) {
     '</p></div><aside class="page-aside"><span class="kicker">', ar ? "مقر الخدمة" : "Based in", '</span><p>',
     ar ? "العين، إمارة أبوظبي<br>ومشاريع مختارة في أبوظبي ودبي." : "Al Ain, Abu Dhabi Emirate<br>with selected projects in Abu Dhabi and Dubai.",
     "</p></aside></div></section>",
-    '<section class="section"><div class="container service-intro"><div class="service-intro-image">', image("before-renovation-774w.webp", ar ? "تنفيذ ديكور سقف جبس بورد في الموقع" : "Gypsum-board ceiling work during site execution", "", "eager"),
+    '<section class="section"><div class="container service-intro"><div class="service-intro-image">', image("gypsum-ceiling-execution.webp", ar ? "تنفيذ سقف جبس بورد مودرن في الموقع" : "Modern gypsum-board ceiling execution on site", "", "eager"),
     '</div><article class="prose"><h2>', ar ? "ما الذي نفعله؟" : "What we actually do", '</h2><p>',
     ar ? "نبدأ بالقياس وفهم الشكل المطلوب، ثم نضبط المحاور والمناسيب وفتحات الإضاءة والخدمات. بعد اعتماد النطاق ننفذ الهيكل والألواح ومعالجة الفواصل وتجهيز السطح حسب الاتفاق." : "We begin with measurement and the desired style, then resolve axes, levels, lighting openings and related services. Once the scope is agreed, we execute the framing, board installation, jointing and surface preparation.",
     '</p><p>', ar ? "يشمل عملنا الأسقف المستوية والمتعددة المستويات والكوفات وبيوت الستائر والزخارف والمراكز، إضافة إلى فريمات الجدران والنيشات والأقواس وخلفيات التلفاز المصنوعة بالجبس بورد." : "Our work includes flat and multi-level ceilings, coves, curtain pockets, borders and centres, together with gypsum-board wall frames, niches, arches and television backgrounds.",
@@ -507,7 +603,8 @@ function aboutPage(lang) {
     alternates: pairFor(basePath),
     title,
     description,
-    image: "before-renovation-774w.webp",
+    image: "gypsum-ceiling-execution.webp",
+    imageAlt: ar ? "تنفيذ سقف جبس بورد مودرن في الموقع" : "Modern gypsum-board ceiling execution on site",
     schema: [{
       "@type": "AboutPage",
       "@id": site + path + "#about",
@@ -516,7 +613,10 @@ function aboutPage(lang) {
       url: site + path,
       about: { "@id": site + "/#business" },
       inLanguage: ar ? "ar-AE" : "en-AE"
-    }]
+    }, breadcrumbSchema(path, lang, [
+      { name: ar ? "الرئيسية" : "Home", path: pathFor(lang, "/") },
+      { name: ar ? "من نحن" : "About" }
+    ])]
   }) + body;
 }
 
@@ -533,7 +633,7 @@ function sitemapEntry(enPath, arPath, priority) {
     '    <xhtml:link rel="alternate" hreflang="en-AE" href="' + site + enPath + '"/>',
     '    <xhtml:link rel="alternate" hreflang="ar-AE" href="' + site + arPath + '"/>',
     '    <xhtml:link rel="alternate" hreflang="x-default" href="' + site + enPath + '"/>',
-    "    <lastmod>" + date + "</lastmod>",
+    "    <lastmod>" + lastModified + "</lastmod>",
     "    <changefreq>monthly</changefreq>",
     "    <priority>" + priority + "</priority>",
     "  </url>"

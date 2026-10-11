@@ -1,7 +1,7 @@
 export const services = [
   {
     slug: "gypsum-ceilings",
-    image: "classic-majlis-1024w.webp",
+    image: "modern-ceiling-hero.webp",
     en: {
       label: "Ceiling decoration",
       title: "Gypsum ceiling design & execution",
@@ -29,7 +29,7 @@ export const services = [
   },
   {
     slug: "gypsum-walls",
-    image: "classic-cove-720w.webp",
+    image: "modern-gypsum-tv-wall.webp",
     en: {
       label: "Wall decoration",
       title: "Gypsum wall details & feature panels",
@@ -57,7 +57,7 @@ export const services = [
   },
   {
     slug: "led-lighting",
-    image: "marble-majlis-676w.webp",
+    image: "modern-cove-reception.webp",
     en: {
       label: "Lighting integration",
       title: "Lighting details within gypsum ceilings",
@@ -85,7 +85,7 @@ export const services = [
   },
   {
     slug: "modern-classic-finishing",
-    image: "patterned-majlis-1024w.webp",
+    image: "modern-cove-reception.webp",
     en: {
       label: "Style & execution",
       title: "Modern & classic gypsum-board styles",
@@ -116,7 +116,7 @@ export const services = [
 export const articles = [
   {
     slug: "gypsum-ceiling-design-guide-abu-dhabi",
-    image: "classic-majlis-1024w.webp",
+    image: "modern-ceiling-hero.webp",
     en: {
       title: "A practical guide to gypsum ceiling design in Abu Dhabi",
       description: "Plan a gypsum ceiling for an Abu Dhabi villa or majlis: height, proportions, lighting, AC coordination and execution details.",
@@ -146,7 +146,7 @@ export const articles = [
   },
   {
     slug: "gypsum-wall-decoration-tv-feature-walls",
-    image: "classic-cove-720w.webp",
+    image: "modern-gypsum-tv-wall.webp",
     en: {
       title: "Gypsum wall decoration and TV feature walls",
       description: "How to plan gypsum-board feature walls, niches and TV backgrounds with correct proportion, support, wiring and access.",
@@ -176,7 +176,7 @@ export const articles = [
   },
   {
     slug: "modern-vs-classic-gypsum-majlis",
-    image: "patterned-majlis-1024w.webp",
+    image: "modern-cove-reception.webp",
     en: {
       title: "Modern or classic gypsum for an Abu Dhabi majlis?",
       description: "Compare modern, classic and transitional gypsum styles for an Abu Dhabi majlis, including scale, ceiling height and lighting.",
@@ -206,7 +206,7 @@ export const articles = [
   },
   {
     slug: "choose-gypsum-board-type-uae-villa",
-    image: "before-renovation-774w.webp",
+    image: "gypsum-ceiling-execution.webp",
     en: {
       title: "Choosing gypsum board for a UAE villa",
       description: "Understand regular, moisture-resistant and fire-rated gypsum-board specifications before ceiling or wall execution in a UAE villa.",
@@ -236,7 +236,7 @@ export const articles = [
   },
   {
     slug: "plan-lighting-with-gypsum-ceiling",
-    image: "marble-majlis-676w.webp",
+    image: "modern-cove-reception.webp",
     en: {
       title: "How to plan lighting with a gypsum ceiling",
       description: "Coordinate LED coves, spotlights, chandeliers, linear profiles and maintenance access before closing a gypsum ceiling.",
@@ -266,7 +266,7 @@ export const articles = [
   },
   {
     slug: "gypsum-ceiling-cost-factors-abu-dhabi",
-    image: "octagonal-ceiling-1024w.webp",
+    image: "gypsum-ceiling-execution.webp",
     en: {
       title: "What affects gypsum ceiling cost in Abu Dhabi?",
       description: "The main factors behind a gypsum ceiling quotation in Abu Dhabi: area, levels, board system, access, lighting and finish.",
@@ -296,7 +296,7 @@ export const articles = [
   },
   {
     slug: "gypsum-board-execution-process-timeline",
-    image: "before-renovation-774w.webp",
+    image: "gypsum-ceiling-execution.webp",
     en: {
       title: "Gypsum-board execution: process and timeline",
       description: "Follow the gypsum-board execution sequence from site measurement and framing to jointing, paint, lighting tests and handover.",
@@ -326,7 +326,7 @@ export const articles = [
   },
   {
     slug: "gypsum-niches-arches-wall-panels",
-    image: "octagonal-ceiling-1024w.webp",
+    image: "modern-gypsum-tv-wall.webp",
     en: {
       title: "Designing gypsum niches, arches and wall panels",
       description: "Practical rules for gypsum-board niches, arches and wall panels: proportion, depth, repetition, lighting and construction.",
@@ -356,7 +356,7 @@ export const articles = [
   },
   {
     slug: "gypsum-ceiling-mistakes-to-avoid",
-    image: "before-renovation-774w.webp",
+    image: "gypsum-ceiling-execution.webp",
     en: {
       title: "10 gypsum ceiling mistakes to avoid",
       description: "Avoid common gypsum-ceiling problems: excessive drops, uncoordinated lights, inaccessible drivers, weak support and rushed joints.",
@@ -386,7 +386,7 @@ export const articles = [
   },
   {
     slug: "gypsum-board-handover-checklist",
-    image: "classic-majlis-1024w.webp",
+    image: "modern-ceiling-hero.webp",
     en: {
       title: "A gypsum-board handover checklist",
       description: "Use this practical checklist to inspect gypsum-board ceilings and walls before final handover and payment.",
@@ -416,7 +416,7 @@ export const articles = [
   },
   {
     slug: "prepare-for-gypsum-site-visit-quotation",
-    image: "classic-cove-720w.webp",
+    image: "modern-cove-reception.webp",
     en: {
       title: "How to prepare for a gypsum site visit and quotation",
       description: "Prepare measurements, references, service information and scope questions before requesting a gypsum-board quotation in Abu Dhabi.",
