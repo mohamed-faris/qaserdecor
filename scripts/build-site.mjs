@@ -11,6 +11,81 @@ const email = "qaseralshamali@gmail.com";
 const publishedDate = "2026-10-06";
 const lastModified = "2026-10-11";
 
+const locations = [
+  {
+    slug: "abu-dhabi",
+    image: "modern-cove-reception.webp",
+    en: {
+      city: "Abu Dhabi",
+      title: "Gypsum Board Work in Abu Dhabi | Qasr Alshamali",
+      description: "Gypsum-board ceiling and wall decoration and site execution for villas and majlis rooms in Abu Dhabi. Modern ceilings, coves, TV walls, niches and lighting-ready details.",
+      intro: "Qasr Alshamali provides specialist gypsum-board ceiling and wall design detailing and execution for suitable villa and majlis projects in Abu Dhabi. We turn an agreed modern or classic reference into measured, buildable levels, openings and finishes.",
+      sections: [
+        ["Gypsum-board work planned for the actual Abu Dhabi room", ["A successful ceiling begins with the room’s clear height, beams, curtain pockets, air-conditioning points and intended lighting—not with a copied online image. We review those constraints before agreeing drops, coves, shadow gaps or wall composition.", "For a villa reception, majlis or private room, the setting-out is adjusted around entrances, windows and the main furniture axis. This gives the finished ceiling or wall a deliberate proportion from the positions where it will be seen."]],
+        ["Specialist ceiling and wall scope", ["Our work is limited to gypsum-board decoration and execution for ceilings and walls. The scope can include the details that make a modern gypsum composition work as one system."], ["False ceilings, recessed trays, coves and shadow gaps", "Curtain pockets, spotlight openings and linear-light channels", "Gypsum-board TV walls, niches, arches and framed wall panels", "Metal framing, boards, jointing and finish preparation", "Coordination of access openings with the responsible services trades"]],
+        ["A clear route from site survey to handover", ["Share the Abu Dhabi project area, room type, current condition and a few useful references. We use the survey to confirm levels, openings and any conditions that affect the buildable scope.", "Before boards are closed, framing geometry and service locations should be checked. At handover, surfaces, lighting effects and maintenance access are reviewed as one finished composition."]]
+      ],
+      faqs: [
+        { q: "Do you work on gypsum-board ceilings in Abu Dhabi villas?", a: "Yes, for suitable Abu Dhabi villa and majlis projects. The final scope follows a site review, measured room conditions and the agreed gypsum-board detail." },
+        { q: "Do you provide complete interior design in Abu Dhabi?", a: "No. Qasr Alshamali specialises in gypsum-board ceiling and wall decoration and execution, not furniture, joinery or complete interior design." },
+        { q: "What should I send before requesting a visit?", a: "Send the location, room type, current photos, any useful reference and the preferred timing through WhatsApp. This helps define whether a site survey is the right next step." }
+      ]
+    },
+    ar: {
+      city: "أبوظبي",
+      title: "تنفيذ جبس بورد في أبوظبي | قصر الشمالي",
+      description: "تصميم وتنفيذ ديكورات الجبس بورد للأسقف والجدران للفلل والمجالس في أبوظبي: أسقف مودرن، كوفات، جدران تلفاز، نيشات وتجهيزات الإضاءة.",
+      intro: "قصر الشمالي متخصص في تفصيل وتنفيذ أعمال الجبس بورد للأسقف والجدران للمشاريع المناسبة في أبوظبي، بما يشمل الفلل والمجالس. نحوّل المرجع المودرن أو الكلاسيكي المتفق عليه إلى مناسيب وفتحات وتشطيبات قابلة للتنفيذ بعد القياس.",
+      sections: [
+        ["أعمال جبس بورد مصممة لمكانك في أبوظبي", ["يبدأ السقف الناجح من الارتفاع الصافي والجوائز وبيت الستارة ومواقع التكييف والإضاءة، وليس من نسخ صورة من الإنترنت. نراجع هذه العناصر قبل اعتماد المناسيب أو الكوفات أو خطوط الظل أو تكوين الجدار.", "في الاستقبال أو المجلس أو الغرفة الخاصة نضبط المحاور حسب المداخل والنوافذ ومركز الأثاث، حتى تظهر نسب السقف أو الجدار متوازنة من أماكن الاستخدام الفعلية."]],
+        ["نطاق متخصص للأسقف والجدران", ["نطاقنا محدد في ديكور وتنفيذ الجبس بورد للأسقف والجدران، مع التفاصيل التي تجعل التكوين المودرن متكاملاً."], ["أسقف مستعارة وصوانٍ وكوفات وخطوط ظل", "بيوت ستائر وفتحات سبوتات وقنوات إنارة خطية", "خلفيات تلفاز ونيشات وأقواس وفريمات جدارية بالجبس بورد", "هياكل معدنية وألواح ومعالجة فواصل وتجهيز للتشطيب", "تنسيق فتحات الصيانة مع الفنيين المختصين بالخدمات"]],
+        ["من المعاينة إلى التسليم", ["أرسل موقع المشروع في أبوظبي ونوع الغرفة وصور الوضع الحالي وبعض المراجع المفيدة. نستخدم المعاينة لتثبيت المناسيب والفتحات والظروف التي تؤثر في نطاق التنفيذ.", "قبل إغلاق الألواح تُراجع استقامة الهيكل ومواقع الخدمات. وعند التسليم نفحص الأسطح وتأثير الإضاءة وفتحات الصيانة كتكوين واحد."]]
+      ],
+      faqs: [
+        { q: "هل تنفذون أسقف جبس بورد للفلل في أبوظبي؟", a: "نعم للمشاريع المناسبة من الفلل والمجالس في أبوظبي. يتحدد النطاق النهائي بعد معاينة المكان وقياساته والاتفاق على تفاصيل الجبس بورد." },
+        { q: "هل تقدمون ديكور داخلي كامل في أبوظبي؟", a: "لا. تخصص قصر الشمالي هو ديكور وتنفيذ الجبس بورد للأسقف والجدران، وليس الأثاث أو النجارة أو التصميم الداخلي الشامل." },
+        { q: "ماذا أرسل قبل طلب المعاينة؟", a: "أرسل موقع المشروع ونوع الغرفة وصور الوضع الحالي وأي مرجع مفيد والوقت المفضل عبر واتساب، حتى نحدد إن كانت المعاينة هي الخطوة المناسبة." }
+      ]
+    }
+  },
+  {
+    slug: "al-ain",
+    image: "modern-gypsum-tv-wall.webp",
+    en: {
+      city: "Al Ain",
+      title: "Gypsum Board Work in Al Ain | Qasr Alshamali",
+      description: "Gypsum-board ceiling and wall decoration and execution in Al Ain for villas and majlis rooms. Measured false ceilings, coves, TV walls, niches and lighting-ready details.",
+      intro: "Based in Al Ain, Qasr Alshamali specialises in the measured design detailing and site execution of gypsum-board ceilings and walls for villas, majlis rooms and selected projects.",
+      sections: [
+        ["Start with a measured Al Ain site survey", ["The ceiling level that suits one room may not suit another. We begin by reading the existing dimensions, beams, windows, curtain treatment, air-conditioning points and intended lighting before the gypsum layout is confirmed.", "That information guides the board levels, centre lines, openings and maintenance access. It also prevents a reference image from being forced into a room where its proportions do not work."]],
+        ["Modern gypsum-board details for ceilings and walls", ["A restrained modern detail is built from accurate framing and controlled transitions. We focus on the gypsum-board parts of the composition and coordinate related service locations before closure."], ["Recessed and multi-level gypsum-board ceilings", "Concealed-light coves, curtain pockets and shadow-line details", "Television-wall backgrounds, niches, framed panels and arches", "Openings for downlights, linear profiles, chandeliers and access panels", "Jointing and surface preparation for the agreed finishing system"]],
+        ["What makes execution dependable", ["The visible finish relies on decisions that disappear behind the boards: framing alignment, backing, service coordination and time for joint treatment. Those items are reviewed before the next stage covers them.", "For an Al Ain project, send current room photos and the preferred gypsum style. We can then arrange the appropriate next step and define a clear specialist scope."]]
+      ],
+      faqs: [
+        { q: "Are you based in Al Ain?", a: "Yes. Al Ain is the business location, and the team serves suitable projects in Al Ain, Abu Dhabi and Dubai." },
+        { q: "What gypsum-board work do you carry out in Al Ain?", a: "The specialist scope covers gypsum-board ceilings and walls: false ceilings, coves, curtain pockets, TV walls, niches, arches, framing, boards and finish preparation." },
+        { q: "Can you price a gypsum ceiling from a photo?", a: "Photos are useful for an initial discussion, but a final price requires the room measurements, the agreed detail and any conditions that affect execution." }
+      ]
+    },
+    ar: {
+      city: "العين",
+      title: "تنفيذ جبس بورد في العين | قصر الشمالي",
+      description: "ديكور وتنفيذ الجبس بورد للأسقف والجدران في العين للفلل والمجالس: أسقف مستعارة وكوفات وجدران تلفاز ونيشات وتجهيزات الإضاءة.",
+      intro: "يقع قصر الشمالي في العين ويتخصص في تفصيل وتنفيذ أعمال الجبس بورد للأسقف والجدران للفلل والمجالس والمشاريع المختارة، انطلاقاً من القياس الفعلي للمكان.",
+      sections: [
+        ["نبدأ بمعاينة وقياس المكان في العين", ["المستوى المناسب لسقف غرفة لا يلزم أن يناسب غرفة أخرى. نبدأ بقراءة الأبعاد والجوائز والنوافذ وبيت الستارة ومواقع التكييف والإضاءة قبل تثبيت توزيع الجبس بورد.", "هذه المعلومات تحدد المناسيب والمحاور والفتحات وفتحات الصيانة، وتمنع فرض صورة مرجعية على غرفة لا تناسبها نسب ذلك التصميم."]],
+        ["تفاصيل جبس بورد مودرن للأسقف والجدران", ["التفصيل المودرن الهادئ يعتمد على هيكل دقيق وانتقالات منضبطة. نركز على عناصر الجبس بورد وننسق مواقع الخدمات المرتبطة قبل الإغلاق."], ["أسقف جبس بورد نازلة ومتعددة المستويات", "كوفات بإضاءة مخفية وبيوت ستائر وخطوط ظل", "خلفيات تلفاز ونيشات وفريمات وأقواس جدارية", "فتحات سبوتات وإنارة خطية وثريات وفتحات صيانة", "معالجة فواصل وتجهيز الأسطح لنظام التشطيب المتفق عليه"]],
+        ["ما الذي يجعل التنفيذ موثوقاً؟", ["التشطيب الظاهر يعتمد على قرارات مخفية خلف الألواح: استقامة الهيكل والتدعيم وتنسيق الخدمات ووقت معالجة الفواصل. نراجع هذه النقاط قبل تغطيتها بالمرحلة التالية.", "للمشروع في العين أرسل صور الغرفة الحالية والستايل المطلوب، ثم نحدد الخطوة المناسبة ونطاق العمل المتخصص بوضوح."]]
+      ],
+      faqs: [
+        { q: "هل مقر قصر الشمالي في العين؟", a: "نعم. مقر العمل في العين، ونخدم المشاريع المناسبة في العين وأبوظبي ودبي." },
+        { q: "ما أعمال الجبس بورد التي تنفذونها في العين؟", a: "يشمل تخصصنا أسقف وجدران الجبس بورد: الأسقف المستعارة والكوفات وبيوت الستائر وخلفيات التلفاز والنيشات والأقواس والهياكل والألواح وتجهيز السطح." },
+        { q: "هل يمكن تسعير سقف الجبس من صورة فقط؟", a: "تفيد الصور في النقاش الأولي، لكن السعر النهائي يحتاج إلى قياسات الغرفة والتفاصيل المتفق عليها والظروف التي تؤثر على التنفيذ." }
+      ]
+    }
+  }
+];
+
 const imageDimensions = {
   "classic-majlis-1024w.webp": [1024, 1536],
   "patterned-majlis-1024w.webp": [1024, 1536],
@@ -76,6 +151,22 @@ function businessSchema() {
     },
     areaServed: ["Abu Dhabi", "Al Ain", "Dubai"].map((name) => ({ "@type": "City", name })),
     knowsLanguage: ["en", "ar"],
+    knowsAbout: [
+      "Gypsum-board ceiling decoration",
+      "Gypsum-board wall decoration",
+      "False ceilings",
+      "Concealed cove lighting details",
+      "Television feature walls",
+      "Gypsum-board site execution"
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: phone,
+      email,
+      contactType: "customer service",
+      availableLanguage: ["English", "Arabic"],
+      areaServed: ["Abu Dhabi", "Al Ain", "Dubai"]
+    },
     sameAs: ["https://www.instagram.com/qaser.uae/"]
   };
 }
@@ -185,6 +276,8 @@ function footer(lang) {
     "</ul></div>\n",
     '<div><h2>', ar ? "استكشف" : "Explore", '</h2><ul>',
     '<li><a href="', home, '#work">', ar ? "أعمال مختارة" : "Selected work", "</a></li>",
+    '<li><a href="', pathFor(lang, "/locations/abu-dhabi/"), '">', ar ? "أعمال الجبس بورد في أبوظبي" : "Gypsum board work in Abu Dhabi", "</a></li>",
+    '<li><a href="', pathFor(lang, "/locations/al-ain/"), '">', ar ? "أعمال الجبس بورد في العين" : "Gypsum board work in Al Ain", "</a></li>",
     '<li><a href="', pathFor(lang, "/blog/"), '">', ar ? "مجلة الجبس بورد" : "Gypsum journal", "</a></li>",
     '<li><a href="', pathFor(lang, "/about/"), '">', ar ? "من نحن" : "About us", "</a></li>",
     '<li><a href="', home, '#contact">', ar ? "التواصل" : "Contact", "</a></li>",
@@ -314,6 +407,14 @@ function homepage(lang) {
       escapeHtml(item.deck), "</p></a>"
     ].join("");
   }).join("");
+  const locationCards = locations.map((location) => {
+    const item = location[lang];
+    return [
+      '<a class="location-card" href="', pathFor(lang, "/locations/" + location.slug + "/"), '" data-reveal><span class="kicker">',
+      ar ? "منطقة خدمة" : "Service area", '</span><h3>', escapeHtml(item.city), '</h3><p>', escapeHtml(item.description),
+      '</p><span class="location-card-link">', ar ? "استكشف الخدمة" : "Explore the local service", "</span></a>"
+    ].join("");
+  }).join("");
   const body = [
     header(lang, "home", alternate),
     '<main id="main">\n',
@@ -337,6 +438,10 @@ function homepage(lang) {
     ar ? "تخصصنا" : "Our expertise", '</span><h2>', ar ? "تفاصيل قابلة للتنفيذ." : "Details made buildable.", '</h2></div><p>',
     ar ? "نضبط المرجع على قياسات المكان وننسق الفتحات ثم ننفذ أعمال الجبس بورد بوضوح من أول زيارة حتى الاستلام." : "We adapt the reference to the measured room, coordinate the openings and execute the gypsum-board work from first survey to handover.",
     '</p></div><div class="service-list">', serviceRows, "</div></div></section>\n",
+    '<section class="section section-local" id="service-areas"><div class="container"><div class="section-head" data-reveal><div><span class="eyebrow">',
+    ar ? "مناطق الخدمة" : "Service areas", '</span><h2>', ar ? "جبس بورد في أبوظبي والعين." : "Gypsum board work in Abu Dhabi and Al Ain.",
+    '</h2></div><p>', ar ? "صفحات محلية توضح نطاق أعمال الأسقف والجدران، وكيف نبدأ المعاينة والتفصيل للمشروع حسب المدينة." : "Local guides to the ceiling and wall scope, and how a site survey and detail process begins in each city.",
+    '</p></div><div class="location-grid">', locationCards, "</div></div></section>\n",
     '<section class="section" id="work"><div class="container"><div class="section-head" data-reveal><div><span class="eyebrow">',
     ar ? "اتجاهات مودرن" : "Modern gypsum direction", '</span><h2>', ar ? "السقف جزء من العمارة." : "The ceiling is part of the architecture.", '</h2></div><p>',
     ar ? "أمثلة بصرية لتفاصيل السقف والجدار التي يمكن تطويرها حسب القياس الحقيقي للموقع؛ نثبت المقاسات والفتحات قبل البدء في التنفيذ." : "Visual references for ceiling and wall details that are developed around the real site measurement; levels and openings are confirmed before execution begins.",
@@ -426,6 +531,81 @@ function servicePage(service, lang) {
     image: service.image,
     imageAlt: item.title,
     schema: [serviceSchema, serviceBreadcrumb]
+  }) + body;
+}
+
+function locationPage(location, lang) {
+  const ar = lang === "ar";
+  const item = location[lang];
+  const basePath = "/locations/" + location.slug + "/";
+  const path = pathFor(lang, basePath);
+  const alternate = pathFor(ar ? "en" : "ar", basePath);
+  const sections = item.sections.map((section) => {
+    const paragraphs = section[1].map((paragraph) => "<p>" + escapeHtml(paragraph) + "</p>").join("");
+    const bullets = section[2] ? "<ul>" + section[2].map((bullet) => "<li>" + escapeHtml(bullet) + "</li>").join("") + "</ul>" : "";
+    return "<section><h2>" + escapeHtml(section[0]) + "</h2>" + paragraphs + bullets + "</section>";
+  }).join("");
+  const citySchema = {
+    "@type": "Service",
+    "@id": site + path + "#local-service",
+    name: ar ? "أعمال الجبس بورد في " + item.city : "Gypsum board work in " + item.city,
+    serviceType: ar ? "تصميم وتنفيذ ديكور الجبس بورد للأسقف والجدران" : "Gypsum-board ceiling and wall decoration and execution",
+    description: item.description,
+    url: site + path,
+    image: site + "/assets/images/" + location.image,
+    provider: { "@id": site + "/#business" },
+    areaServed: { "@type": "City", name: item.city, address: { "@type": "PostalAddress", addressCountry: "AE" } }
+  };
+  const pageSchema = {
+    "@type": "WebPage",
+    "@id": site + path + "#webpage",
+    url: site + path,
+    name: item.title,
+    description: item.description,
+    inLanguage: ar ? "ar-AE" : "en-AE",
+    about: { "@id": site + path + "#local-service" },
+    primaryImageOfPage: site + "/assets/images/" + location.image
+  };
+  const faqSchema = {
+    "@type": "FAQPage",
+    "@id": site + path + "#faq",
+    mainEntity: item.faqs.map((entry) => ({ "@type": "Question", name: entry.q, acceptedAnswer: { "@type": "Answer", text: entry.a } }))
+  };
+  const cityBreadcrumb = breadcrumbSchema(path, lang, [
+    { name: ar ? "الرئيسية" : "Home", path: pathFor(lang, "/") },
+    { name: ar ? "مناطق الخدمة" : "Service areas", path: pathFor(lang, "/") + "#service-areas" },
+    { name: item.city }
+  ]);
+  const body = [
+    header(lang, "", alternate),
+    '<main id="main">',
+    breadcrumbs(lang, [
+      { name: ar ? "الرئيسية" : "Home", href: pathFor(lang, "/") },
+      { name: ar ? "مناطق الخدمة" : "Service areas", href: pathFor(lang, "/") + "#service-areas" },
+      { name: item.city }
+    ]),
+    '<section class="page-hero"><div class="container page-hero-grid"><div><span class="eyebrow">', ar ? "منطقة خدمة" : "Service area", '</span><h1>',
+    escapeHtml(ar ? "تنفيذ جبس بورد في " + item.city : "Gypsum board work in " + item.city), '</h1><p class="lede">', escapeHtml(item.intro),
+    '</p><div class="button-row"><a class="button solid" href="https://wa.me/971507427070" target="_blank" rel="noopener">', ar ? "اطلب معاينة" : "Request a site visit", '</a></div></div><aside class="page-aside"><span class="kicker">',
+    ar ? "التخصص" : "Specialist scope", '</span><p>', ar ? "ديكور وتنفيذ الجبس بورد للأسقف والجدران. لا نقدم الديكور الداخلي العام أو الأثاث أو النجارة." : "Gypsum-board ceiling and wall decoration and execution. We do not provide general interior decoration, furniture or joinery.",
+    '</p></aside></div></section>',
+    '<section class="section"><div class="container service-intro"><div class="service-intro-image">', image(location.image, item.title, "", "eager"), '</div><article class="prose">', sections,
+    '<div class="prose-note"><strong>', ar ? "قبل طلب السعر" : "Before requesting a quotation", '</strong><p>', ar ? "أرسل المدينة ونوع الغرفة وصور الوضع الحالي وأي مرجع مفيد. نعتمد تفاصيل العمل والسعر بعد القياس وتحديد النطاق القابل للتنفيذ." : "Send the city, room type, current photos and a useful reference. The work detail and final price follow measurement and an agreed buildable scope.",
+    '</p></div></article></div></section>',
+    faqSection(lang, item.faqs),
+    contactBand(lang),
+    '</main>',
+    footer(lang)
+  ].join("");
+  return head({
+    lang,
+    path,
+    alternates: pairFor(basePath),
+    title: item.title,
+    description: item.description,
+    image: location.image,
+    imageAlt: item.title,
+    schema: [citySchema, pageSchema, faqSchema, cityBreadcrumb]
   }) + body;
 }
 
@@ -654,6 +834,11 @@ async function build() {
     await output("ar/services/" + service.slug + "/index.html", servicePage(service, "ar"));
   }
 
+  for (const location of locations) {
+    await output("locations/" + location.slug + "/index.html", locationPage(location, "en"));
+    await output("ar/locations/" + location.slug + "/index.html", locationPage(location, "ar"));
+  }
+
   for (const [index, article] of articles.entries()) {
     await output("blog/" + article.slug + "/index.html", articlePage(article, "en", index));
     await output("ar/blog/" + article.slug + "/index.html", articlePage(article, "ar", index));
@@ -664,6 +849,7 @@ async function build() {
     ["/about/", "/ar/about/", "0.7"],
     ["/blog/", "/ar/blog/", "0.9"],
     ...services.map((service) => ["/services/" + service.slug + "/", "/ar/services/" + service.slug + "/", "0.9"]),
+    ...locations.map((location) => ["/locations/" + location.slug + "/", "/ar/locations/" + location.slug + "/", "0.9"]),
     ...articles.map((article) => ["/blog/" + article.slug + "/", "/ar/blog/" + article.slug + "/", "0.8"])
   ];
   const sitemap = [
@@ -683,7 +869,7 @@ async function build() {
   ].join("\n");
   await output("_redirects", redirects);
 
-  console.log("Built " + (6 + services.length * 2 + articles.length * 2) + " HTML pages, sitemap.xml and _redirects");
+  console.log("Built " + (6 + services.length * 2 + locations.length * 2 + articles.length * 2) + " HTML pages, sitemap.xml and _redirects");
 }
 
 await build();

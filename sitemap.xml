@@ -127,6 +127,42 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://qaserdecor.com/locations/abu-dhabi/</loc>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://qaserdecor.com/locations/abu-dhabi/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://qaserdecor.com/ar/locations/abu-dhabi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qaserdecor.com/locations/abu-dhabi/"/>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qaserdecor.com/ar/locations/abu-dhabi/</loc>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://qaserdecor.com/locations/abu-dhabi/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://qaserdecor.com/ar/locations/abu-dhabi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qaserdecor.com/locations/abu-dhabi/"/>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qaserdecor.com/locations/al-ain/</loc>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://qaserdecor.com/locations/al-ain/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://qaserdecor.com/ar/locations/al-ain/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qaserdecor.com/locations/al-ain/"/>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qaserdecor.com/ar/locations/al-ain/</loc>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://qaserdecor.com/locations/al-ain/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://qaserdecor.com/ar/locations/al-ain/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qaserdecor.com/locations/al-ain/"/>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://qaserdecor.com/blog/gypsum-ceiling-design-guide-abu-dhabi/</loc>
     <xhtml:link rel="alternate" hreflang="en-AE" href="https://qaserdecor.com/blog/gypsum-ceiling-design-guide-abu-dhabi/"/>
     <xhtml:link rel="alternate" hreflang="ar-AE" href="https://qaserdecor.com/ar/blog/gypsum-ceiling-design-guide-abu-dhabi/"/>
